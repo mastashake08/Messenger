@@ -1,5 +1,5 @@
 <?php
-
+    
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,5 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-
+$app->get('/',function(){
+  return 'true';
+});
 $app->post('message','MessageController@store');

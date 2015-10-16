@@ -29,6 +29,6 @@ class MessageCreatedEvent extends Event implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return ['new-message'];
+        return ['message'];
     }
 }

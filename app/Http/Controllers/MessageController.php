@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Events\MessageCreatedEvent;
@@ -7,6 +6,7 @@ use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
+
     /**
      * Store a new message.
      *
@@ -15,8 +15,10 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
+
         $message = $request->message;
           event(new MessageCreatedEvent($message));
+          return $message;
 
         //
     }
