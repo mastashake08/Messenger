@@ -3,9 +3,10 @@ var io = require('socket.io')(app);
 
 var Redis = require('ioredis');
 var redis = new Redis();
-
-app.listen(6001, function() {
+var port = 6001;
+app.listen(port, function() {
     console.log('Server is running!');
+    console.log('Listening on port: ' + port);
 });
 
 function handler(req, res) {
