@@ -14,7 +14,7 @@ class CorsMiddleware {
     public function handle($request, Closure $next)
     {
       // ALLOW OPTIONS METHOD
-      header("Access-Control-Allow-Origin: *");
+      header("Access-Control-Allow-Origin: http://localhost:8001/");
       header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD');
       header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X-Request-With, X-CSRF-TOKEN');
       header('Access-Control-Allow-Credentials: true');
